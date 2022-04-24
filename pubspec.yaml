@@ -1,4 +1,4 @@
-name: everytest
+name: every_test
 description: Parametrized tests package
 version: 0.0.1
 repository: https://github.com/PiotrFLEURY/everytest
@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
   flutter_test:
     sdk: flutter
+  meta: ^1.7.0
 
 dev_dependencies:
   

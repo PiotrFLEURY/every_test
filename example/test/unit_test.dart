@@ -1,4 +1,4 @@
-import 'package:everytest/everytest.dart';
+import 'package:every_test/every_test.dart';
 import 'package:example/domain/sample_repository.dart';
 import 'package:example/domain/translations_repository.dart';
 import 'package:flutter_test/flutter_test.dart';

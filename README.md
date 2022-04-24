@@ -13,7 +13,7 @@ and the Flutter guide for
 
 # Every Test
 
-Write and execute multiple combination of the same test with less code with everytest package.
+Write and execute multiple combination of the same test with less code with every_test package.
 
 ## Features
 
@@ -24,7 +24,7 @@ Write and execute multiple combination of the same test with less code with ever
 ## Getting started
 
 ```shell
-flutter pub add everytest
+flutter pub add --dev every_test
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ Start by calling `everyTest` method in any `*_test.dart` file
 
 ```dart
 main() {
-    everyTest(...);
+    everyTest(/***/);
 }
 ```
 
@@ -61,7 +61,7 @@ of: (param) {
 ...    
 ```
 
-Last bu not least, give it the list of expected results depending on parameter using `param(foo).gives(bar)` syntax
+Last but not least, give it the list of expected results depending on parameter using `param(foo).gives(bar)` syntax
 
 ```dart
 ...

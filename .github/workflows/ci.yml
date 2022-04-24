@@ -19,6 +19,7 @@ jobs:
           flutter format --set-exit-if-changed .
           flutter analyze
           cd example
+          flutter test --coverage
           flutter build ${{ matrix.build-argument }}
       - uses: VeryGoodOpenSource/very_good_coverage@v1
         with:

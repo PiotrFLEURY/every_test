@@ -19,4 +19,4 @@ jobs:
           flutter analyze
           cd example
           flutter build ${{ matrix.build-argument }}
-      uses: VeryGoodOpenSource/very_good_coverage@v1
+      - uses: VeryGoodOpenSource/very_good_coverage@v1

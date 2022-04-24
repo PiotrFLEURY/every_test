@@ -23,4 +23,5 @@ jobs:
           flutter build ${{ matrix.build-argument }}
       - uses: VeryGoodOpenSource/very_good_coverage@v1
         with:
+          path: 'example/coverage/lcov.info'
           min_coverage: 90

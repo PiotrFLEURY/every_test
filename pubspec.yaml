@@ -1,6 +1,7 @@
 name: everytest
 description: Parametrized tests package
 version: 0.0.1
+repository: https://github.com/PiotrFLEURY/everytest
 homepage: https://github.com/PiotrFLEURY/everytest
 
 environment:

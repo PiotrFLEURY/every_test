@@ -1,6 +1,6 @@
 name: every_test
-description: Parametrized tests package
-version: 0.0.1
+description: Parametrized tests package to write your test one time and get multiple results just by giving a list of parameter values
+version: 1.0.0
 repository: https://github.com/PiotrFLEURY/everytest
 homepage: https://github.com/PiotrFLEURY/everytest
 

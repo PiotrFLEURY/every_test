@@ -20,8 +20,8 @@ void main() {
 
   everyTestGolden(
     'every test golden',
-    of: (tester, param) async {
-      await tester.pumpWidget(MyApp(primarySwatch: param));
+    of: (tester, color) async {
+      await tester.pumpWidget(MyApp(primarySwatch: color));
     },
     expects: [
       finder(find.byType(MyApp)).matches(Colors.blue, 'goldens/blue.png'),

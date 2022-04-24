@@ -42,70 +42,60 @@ main() {
 Then give it a description
 
 ```dart
-main() {
-    everyTest(
-        'my first everyTest test',
-        ...
-    );
-}
+everyTest(
+    'my first everyTest test',
+    ...
+);
 ```
 
 Give it the test itself using parameter
 
 ```dart
-main() {
-    everyTest(
-        'my first everyTest test',
-        of: (param) {
-            final repository = SampleRepository();
-            repository.values = param;
-            return repository.average;
-        },
-        ...
-    );
-}
+...
+'my first everyTest test',
+of: (param) {
+    final repository = SampleRepository();
+    repository.values = param;
+    return repository.average;
+},
+...    
 ```
 
 Last bu not least, give it the list of expected results depending on parameter using `param(foo).gives(bar)` syntax
 
 ```dart
-main() {
-    everyTest(
-        'my first everyTest test',
-        of: (param) {
-            final repository = SampleRepository();
-            repository.values = param;
-            return repository.average;
-        },
-        expects: [
-            param([1, 2, 3]).gives(2),
-        ],
-    );
-}
+...
+of: (param) {
+    ...
+},
+expects: [
+    param([1, 2, 3]).gives(2),
+],
+...
 ```
 
-Then add as many combination as wanted
+Then add as many combination as wanted and voilà !
 
 ```dart
 everyTest(
     'Expected average values computation',
     of: (param) {
-      final repository = SampleRepository();
-      repository.values = param;
-      return repository.average;
+        final repository = SampleRepository();
+        repository.values = param;
+        return repository.average;
     },
     expects: [
-      param([1, 2, 3]).gives(2),
-      param([4, 5, 6]).gives(5),
-      param([7, 8, 9]).gives(8),
-      param([9, 9, 9]).gives(9),
+        param([1, 2, 3]).gives(2),
+        param([4, 5, 6]).gives(5),
+        param([7, 8, 9]).gives(8),
+        param([9, 9, 9]).gives(9),
     ],
-  );
+);
 ```
 
 ### Using several parameters a time
 
-Just use Json syntax for multiple parameters in each occurence 
+You may need to send multiple parameters for test execution. Just use Json syntax. That's it.
 
 ```dart
 everyTest(
@@ -134,8 +124,8 @@ everyTest(
 ```dart
  everyTestGolden(
     'every test golden',
-    of: (tester, param) async {
-      await tester.pumpWidget(MyApp(primarySwatch: param));
+    of: (tester, color) async {
+      await tester.pumpWidget(MyApp(primarySwatch: color));
     },
     expects: [
       finder(find.byType(MyApp)).matches(Colors.blue, 'goldens/blue.png'),

@@ -21,3 +21,5 @@ jobs:
           cd example
           flutter build ${{ matrix.build-argument }}
       - uses: VeryGoodOpenSource/very_good_coverage@v1
+        with:
+          min_coverage: 90

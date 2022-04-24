@@ -9,7 +9,7 @@ jobs:
         build-argument: [ 'web', 'apk --debug', 'windows' ]
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-java@v2
+      - uses: actions/setup-java@v3
         with:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
@@ -19,3 +19,4 @@ jobs:
           flutter analyze
           cd example
           flutter build ${{ matrix.build-argument }}
+      uses: VeryGoodOpenSource/very_good_coverage@v1

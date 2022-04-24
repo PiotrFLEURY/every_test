@@ -1,7 +1,7 @@
 name: everytest
 description: Parametrized tests package
 version: 0.0.1
-homepage:
+homepage: https://github.com/PiotrFLEURY/everytest
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
